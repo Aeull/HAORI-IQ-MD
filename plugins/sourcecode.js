@@ -24,8 +24,8 @@ let esce = `
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'MY GITHUB',
-               url: 'github.com/PilarV2'
+               displayText: 'MY YOUTUBE',
+               url: 'https://youtube.com/channel/UC1ikkqsPvtWuE_QonsET1yg'
              }
 
            },
