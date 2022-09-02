@@ -10,14 +10,14 @@ let anu = `*─────� DONATE 」 ───*
 Hai 👋
 Kalian bisa mendukung saya agar bot ini tetap up to date dengan:
 ┌〔 Donasi • Emoney 〕
-├🏧 089625556161 (OVO/Dana/GoPay)
+├🏧 085822347348 (Dana/Pulsa)
 └────
 Berapapun donasi kalian akan sangat berarti 👍
 
 Arigatou!
 
 Contact person Owner:
-wa.me/6289625556161 (Owner)
+wa.me/6285822347348 (Owner)
 
 *donasi via follow github juga boleh*`
      const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
@@ -29,8 +29,8 @@ wa.me/6289625556161 (Owner)
            hydratedFooterText: wm,
            hydratedButtons: [{
              urlButton: {
-               displayText: 'MY GITHUB',
-               url: 'github.com/PilarV2'
+               displayText: 'MY YOUTUBE',
+               url: 'https://youtube.com/channel/UC1ikkqsPvtWuE_QonsET1yg'
              }
 
            },
