@@ -244,7 +244,7 @@ const defaultMenu = {
     surface : 1,
     message: `ArullBotz 🌱 ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`, 
     orderTitle: `▮Menu ▸`,
-    thumbnail: await (await fetch('https://telegra.ph/file/780d06d0c837ba77de9f8.jpg')).buffer(), //Gambarnye
+    thumbnail: await (await fetch('https://telegra.ph/file/ba4abc20dd354679db029.jpg')).buffer(), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
@@ -332,7 +332,7 @@ let ftt = `*Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan sil
        buttonText: "Klik Disini", 
        sections 
      } 
- conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/334d224de652b009d82e8.jpg')).buffer(), tksk, ftt, 'OWNER', '.owner', 'DONASI', '.donasi', m, { contextInfo: { mentionedJid: conn.parseMention(tksk)}})
+ conn.send2ButtonLoc(m.chat, await (await fetch('https://telegra.ph/file/ba4abc20dd354679db029.jpg')).buffer(), tksk, ftt, 'OWNER', '.owner', 'DONASI', '.donasi', m, { contextInfo: { mentionedJid: conn.parseMention(tksk)}})
      return conn.sendMessage(m.chat, listMessage, { quoted: m, mentions: await conn.parseMention(judul), contextInfo: { forwardingScore: 99999, isForwarded: true }}) 
       
      } 
@@ -383,20 +383,20 @@ let ftt = `*Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan sil
        readmore: readMore 
      } 
      text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name]) 
-     await conn.sendButtonDoc(m.chat, text.trim(),  '                          「 *カ HAORI BOT IQ MD あ⁩* 」', 'OWNER', '.owner', m, { quoted: m, contextInfo: { 
+     await conn.sendButtonDoc(m.chat, text.trim(),  '                          「 *カ ARULLBOTZ あ⁩* 」', 'OWNER', '.owner', m, { quoted: m, contextInfo: { 
          externalAdReply: { 
              title: 'Haori Suka Furry UωU',
-             body: `${pickRandom(['Furry Indonesia :3', 'Suka Pokemon Nggak Kak :3', 'Kangen Haori Nggak?', 'Udah makan belum kak?', 'Udah Makan Belum?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'Jangan spam ya kak!', 'Jangan lupa donasi yak kak! QωQ', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! UωU', 'Haori Sayang Kamu :3', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`,
+             body: `${pickRandom(['Furry Indonesia :3', 'Suka Pokemon Nggak Kak :3', 'Kangen Arull Nggak?', 'Udah makan belum kak?', 'Udah Makan Belum?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'Jangan spam ya kak!', 'Jangan lupa donasi yak kak! QωQ', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! UωU', 'Haori Sayang Kamu :3', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`,
              description: 'Now Playing...', 
              mediaType: 2, 
-           thumbnail: await (await fetch('https://telegra.ph/file/1f8e012df6e4aca2fbd11.jpg')).buffer(), 
-          mediaUrl: `${pickRandom([`https://youtu.be/35w7z9QFLwY`, `https://www.instagram.com/the.sad.boy01`])}`,
+           thumbnail: await (await fetch('https://telegra.ph/file/ba4abc20dd354679db029.jpg')).buffer(), 
+          mediaUrl: `${pickRandom([`https://chat.whatsapp.com/ItwCvXL02hg11U5qNaLSBe`, `https://www.instagram.com/sahrulwara_____`])}`,
          } 
       } 
    })
    conn.sendFile(m.chat, bzz, 'haori.mp3', null, m, true, {
 type: 'audioMessage', // paksa tanpa convert di ffmpeg
-ptt: true, contextInfo:{externalAdReply: {title: '𝙷𝙰𝙾𝚁𝙸𝙱𝙾𝚃𝚉 𝚂𝙴𝙽𝙶𝙾𝙻 𝙳𝙾𝙽𝙶 :v', body: `${pickRandom(['Simple Bot WhatsApp', 'Create By Zivfurr', 'Furry Botz By Zivfurr'])}`, sourceUrl: 'https://bit.ly/3N024o9', thumbnail: await (await fetch('https://telegra.ph/file/8501db84d6e15b55c6273.jpg')).buffer(),}} 
+ptt: true, contextInfo:{externalAdReply: {title: 'ARULLBOTZ 𝚂𝙴𝙽𝙶𝙾𝙻 𝙳𝙾𝙽𝙶 :v', body: `${pickRandom(['Simple Bot WhatsApp', 'Create By Arull', 'ArullBotz By Arull'])}`, sourceUrl: 'https://chat.whatsapp.com/ItwCvXL02hg11U5qNaLSBe', thumbnail: await (await fetch('https://telegra.ph/file/780d06d0c837ba77de9f8.jpg')).buffer(),}} 
      }) 
    } catch (e) { 
      conn.reply(m.chat, 'Maaf, menu sedang error', m) 
