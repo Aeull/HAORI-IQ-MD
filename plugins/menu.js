@@ -7,7 +7,7 @@ let levelling = require('../lib/levelling')
  let PhoneNumber = require('awesome-phonenumber') 
  const defaultMenu = { 
    before: ` 
-꒦꒷꒷꒦꒷꒦꒦꒦꒷•〔 ll нασяι-вσт ཻུ⸙͎ 〕•꒦꒷꒷꒦꒷꒷꒦꒦꒷
+꒦꒷꒷꒦꒷꒦꒦꒦꒷•〔ArullBotz〕•꒦꒷꒷꒦꒷꒷꒦꒦꒷
 
  ✘⃟🎋   *Name:* %name
  ✘⃟🎋   *Tersisa:* %limit Limit
@@ -198,7 +198,7 @@ const hariRaya = new Date('January 1, 2023 23:59:59')
     const jamm = Math.floor( lebih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
     const menitt = Math.floor( lebih % (1000 * 60 * 60) / (1000 * 60))
     const detikk = Math.floor( lebih % (1000 * 60) / 1000)
-    const ultah = new Date('October 4, 2022 23:59:59')
+    const ultah = new Date('November 4, 2022 23:59:59')
     const sekarat = new Date().getTime() 
     const Kurang = ultah - sekarat
     const ohari = Math.floor( Kurang / (1000 * 60 * 60 * 24));
@@ -227,14 +227,14 @@ const hariRaya = new Date('January 1, 2023 23:59:59')
  m, { contextInfo: { mentionedJid: conn.parseMention(tag) }}
  let waofc = `@${'0'.split('@')[0]}`
  m, { contextInfo: { mentionedJid: conn.parseMention(tag) }}
- let ow = `@${'6282179137771'.split('@')[0]}`
+ let ow = `@${'6285822347348'.split('@')[0]}`
  m, { contextInfo: { mentionedJid: conn.parseMention(tag) }}
 let mode = global.opts['self'] ? 'Private' : 'Public'
 let fkon = { key:
 	 { fromMe: false,
 	 participant: `0@s.whatsapp.net`, ...(m.chat ? 
 	 { remoteJid: "60149431385-1618206438@g.us" } : {}) },
-	 message: { contactMessage: { displayName: `${pickRandom(['HAORI IQ-MD', 'Create By Ziv San', 'Simple Bot Whatsapp'])}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:Zivfurr\nitem1.TEL;waid=6285158866902:6285158866902\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+	 message: { contactMessage: { displayName: `${pickRandom(['ArullBotz', 'Create By Arull', 'Simple Bot Whatsapp'])}`, vcard: `BEGIN:VCARD\nVERSION:3.0\nN:;a,;;;\nFN:ArullBotz\nitem1.TEL;waid=6285158866902:6285158866902\nitem1.X-ABLabel:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
 	}
  const haori = {
     key : {
@@ -246,9 +246,9 @@ let fkon = { key:
     itemCount : 999999999999,
     status: 404,
     surface : 404,
-    message: `© HAORI IQ-MD\nSimple WhatsApp Bot`, 
+    message: `© ArullBotz\nSimple WhatsApp Bot`, 
     orderTitle: `▮Menu ▸`,
-    thumbnail: await (await fetch('https://telegra.ph/file/2b669452f7517d2b5097a.jpg')).buffer(),
+    thumbnail: await (await fetch('https://telegra.ph/file/99a6b440dc934476dff39.jpg')).buffer(),
     }
     }
     }
@@ -313,23 +313,23 @@ let fkon = { key:
 │◦〉 Mode : ${mode}
 │◦〉 Runtime: ${uptime}
 │◦〉 Bot Name : ${conn.user.name}
-│◦〉 Name Owner: Zivfurr & Haori
+│◦〉 Name Owner: Arull
 │◦〉 Register : ${totalreg}
 │◦〉 Database : Lowdb
 ╰━–━–━–━–━–⊙–━–━–━–━┈▧`
 
 let ftt = `📮 Catatan: Perlakukan Bot Secara Baik, Dev Akan Bertindak Tegas Apabila Pengguna Melanggar Rules. 
                  
-                       「 *廾ΛӨЯI IQ MD ᯤ* 」`
+                       「 *ArullBotz ᯤ* 」`
      if (teks == '404') { 
-      return await conn.send2ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/ed6e4421aff4471b172f0.jpg')).buffer(), tksk, ftt, 'COMMAND', '.simplemenu', 'DONASI', '.donasi', haori, { contextInfo: { mentionedJid: conn.parseMention(tksk), externalAdReply :{ 
-     mediaUrl: `${pickRandom([`https://www.facebook.com/Inunime-107082474576049/`,`https://youtu.be/JWHV8lPTzPs`])}`, 
+      return await conn.send2ButtonImg(m.chat, await (await fetch('https://telegra.ph/file/99a6b440dc934476dff39.jpg')).buffer(), tksk, ftt, 'COMMAND', '.simplemenu', 'DONASI', '.donasi', haori, { contextInfo: { mentionedJid: conn.parseMention(tksk), externalAdReply :{ 
+     mediaUrl: `${pickRandom([`https://youtu.be/jOhhY7ef_qM`,`https://youtu.be/NmP2bAEOI9g`])}`, 
      mediaType: 2, 
      description:  '',  
      title: `${ucapan()} Kak ${name} UωU`,
      body: `${pickRandom(['udah makan belum kak?', 'udh mandi belum kak?', 'Semangat ya kak!', 'Jangan begadang mulu ya!', 'jangan spam ya kak!', 'Jangan lupa donasi yak kak! >.<', 'Jaga kesehatan yaw kak!', 'Jangan lupa makan!', 'Jangan lupa istirahat yak! >.<', 'I Love you kak >.< 💗✨', 'Pr nya udh belum kak?', 'Jangan kebanyakan main hp yk! nanti sakit :‹'])}`,
-     thumbnail: await (await fetch('https://telegra.ph/file/f64d6f546f3a28186a9ab.jpg')).buffer(),
-     sourceUrl: 'https://vt.tiktok.com/ZSdwokqe4/'}}})
+     thumbnail: await (await fetch('https://telegra.ph/file/99a6b440dc934476dff39.jpg')).buffer(),
+     sourceUrl: 'https://youtu.be/jOhhY7ef_qM'}}})
   
     }
      let groups = {} 
@@ -380,19 +380,19 @@ let ftt = `📮 Catatan: Perlakukan Bot Secara Baik, Dev Akan Bertindak Tegas Ap
      } 
      text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name]) 
  await conn.reply(m.chat, '*L o a d i n g . . .*', fload) 
-              await conn.send2ButtonVid(m.chat, 'https://telegra.ph/file/58f858fc9872fe5443df4.mp4', text.trim(),  '                   「 *カ HAORI BOT IQ MD あ⁩* 」', 'OWNER', '.owner', 'Ping', '.ping', m, { quoted: haori, contextInfo: { forwardingScore: 99999, isForwarded: true,
+              await conn.send2ButtonVid(m.chat, 'https://telegra.ph/file/99a6b440dc934476dff39.jpg', text.trim(),  '                   「 *カ ArullBotz あ⁩* 」', 'OWNER', '.owner', 'Ping', '.ping', m, { quoted: haori, contextInfo: { forwardingScore: 99999, isForwarded: true,
      externalAdReply :{ 
-     mediaUrl: `${pickRandom([`https://www.facebook.com/Inunime-107082474576049/`,`https://youtu.be/JWHV8lPTzPs`])}`, 
+     mediaUrl: `${pickRandom([`https://youtu.be/4cQwSCtZo1Q`,`https://youtu.be/4cQwSCtZo1Q`])}`, 
      mediaType: 2, 
      description:  '',  
      title: `${ucapan()}`,
      body: `Time ${wktuwib}`,
-     thumbnail: await (await fetch('https://telegra.ph/file/ed6e4421aff4471b172f0.jpg')).buffer(),
-     sourceUrl: 'https://vt.tiktok.com/ZSdwokqe4/'
+     thumbnail: await (await fetch('https://telegra.ph/file/99a6b440dc934476dff39.jpg')).buffer(),
+     sourceUrl: 'https://youtu.be/4cQwSCtZo1Q'
        } 
       } 
    })
- /*let url = `https://telegra.ph/file/2ebe351a63861053f58df.jpg`.trim()
+ /*let url = `https://telegra.ph/file/99a6b440dc934476dff39.jpg`.trim()
     let res = await fetch(url)
     let buffer = await res.buffer()
     let message = await prepareWAMessageMedia({ image: buffer }, { upload: conn.waUploadToServer })
@@ -420,7 +420,7 @@ let ftt = `📮 Catatan: Perlakukan Bot Secara Baik, Dev Akan Bertindak Tegas Ap
                 conn.relayMessage(m.chat, template.message, { messageId: template.key.id })*/
    conn.sendFile(m.chat, bzz, 'haori.mp3', null, fkon, true, {
 type: 'audioMessage', 
-ptt: true, contextInfo:{ externalAdReply: {title: 'Stay Grateful With Your Life', body: `${pickRandom(['Simple Bot WhatsApp', 'Create By Zivfurr'])}`, sourceUrl: 'https://bit.ly/3N024o9', thumbnail: await (await fetch('https://telegra.ph/file/63c668962b7abcc95b394.jpg')).buffer(),}} 
+ptt: true, contextInfo:{ externalAdReply: {title: 'Stay Grateful With Your Life', body: `${pickRandom(['Simple Bot WhatsApp', 'Create By Arull'])}`, sourceUrl: 'https://youtu.be/IL2PZql859c', thumbnail: await (await fetch('https://telegra.ph/file/99a6b440dc934476dff39.jpg')).buffer(),}} 
      }) 
    } catch (e) { 
      conn.reply(m.chat, 'Maaf, Terjadi Kesalahan Program Coding', m) 
