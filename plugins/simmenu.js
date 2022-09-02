@@ -8,7 +8,7 @@ let jimp = require('jimp')
 let PhoneNumber = require('awesome-phonenumber')
 const defaultMenu = {
    before: ` 
-─────────•〔 ll нασяι-вσт ཻུ⸙͎ 〕•─────────
+─────────•〔 ll ArullBotz ཻུ⸙͎ 〕•─────────
 
 🎐  *Name:* %name
 🎐  *Tersisa:* %limit Limit
@@ -38,7 +38,7 @@ const defaultMenu = {
 ⁙╭━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━  ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━╮
 ⁙┃╭┈─────────────⩵꙰ཱི࿐
 ⁙┃╰───━⃝┅ *%category* ┅⃝━───ꕥ ↶↷*
-⁙├☆─〔 HAORI CHAN 〕──┈➤`,
+⁙├☆─〔 ARULLBOTZ 〕──┈➤`,
   body: `⁙├〲 %cmd %islimit %isPremium`,
   footer: `⁙╰•──────━⃝┅⃝━─────┈ ⳹`,
   after: `
@@ -198,7 +198,7 @@ const defaultMenu = {
     const jamm = Math.floor( lebih % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
     const menitt = Math.floor( lebih % (1000 * 60 * 60) / (1000 * 60))
     const detikk = Math.floor( lebih % (1000 * 60) / 1000)
-    const ultah = new Date('August 18, 2022 23:59:59')
+    const ultah = new Date('November 4, 2022 23:59:59')
     const sekarat = new Date().getTime() 
     const Kurang = ultah - sekarat
     const ohari = Math.floor( Kurang / (1000 * 60 * 60 * 24));
@@ -242,9 +242,9 @@ const defaultMenu = {
     itemCount : 999,
     status: 1,
     surface : 1,
-    message: `廾ΛӨЯI IQ MD 🌱 ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`, 
+    message: `ArullBotz 🌱 ┊ 𝗥𝗣𝗚 Whatsapp ʙᴏᴛ`, 
     orderTitle: `▮Menu ▸`,
-    thumbnail: await (await fetch('https://telegra.ph/file/8450b71563bdbfb85b98d.jpg')).buffer(), //Gambarnye
+    thumbnail: await (await fetch('https://telegra.ph/file/780d06d0c837ba77de9f8.jpg')).buffer(), //Gambarnye
     sellerJid: '0@s.whatsapp.net' 
     }
     }
@@ -257,10 +257,10 @@ _${pickRandom(global.motivasi)}_
     
 ╭──── 「 *BOT INFO* 」 ────┈ ⳹
 │ 
-│❒͡ *Bot Name: HAORI IQ MD*
-│❒͡ *Creator: Stah Ziv San*
+│❒͡ *Bot Name: ArullBotz*
+│❒͡ *Creator: Arull*
 │❒͡ *Contact Owner Bot*
-│ *https://wa.me/*
+│ *https://wa.me/6285822347348*
 │❒͡ *Tanggal: 9 Juli 2022*  
 │❒͡ *Jam: ${time} WIB*
 │❒͡ *Status: 「 ${mode} 」*
@@ -272,7 +272,7 @@ _${pickRandom(global.motivasi)}_
 │❒͡  𝙐𝙇𝘼𝙉𝙂 𝙏𝘼𝙃𝙐𝙉 𝙊𝙒𝙉𝙀𝙍 
 │❒͡ _*${ohari} Hari ${ojam} Jam ${onet} Menit ${detek} Detik*_
 │ 
-╰──── 「 *HAORI BOT* 」 ────┈ ⳹
+╰──── 「 *ARULLBOTZ* 」 ────┈ ⳹
 
 ❉─────────────────────❉  
 ◦ *Nama: ${name}*
@@ -289,13 +289,13 @@ _${pickRandom(global.motivasi)}_
 *⟣┈────「 BOT STATUS 」 ────┈⟢*
 ❏ *Runtime ${uptime}*
 𒍮 *User Register: ${totalreg}*
-*⟣┈───「 HAORI BOT 」 ──────┈⟢*`
+*⟣┈───「 ArullBotz 」 ──────┈⟢*`
 
 let ftt = `*Note:* Jika menemukan bug, error atau kesulitan dalam penggunaan silahkan laporkan/tanyakan kepada Owner`
              let judul = `${ucapan()}`.trim() 
        const sections = [ 
        { 
-         title: 'List Menu Haoribotz ', 
+         title: 'List Menu ArullBotz ', 
          rows: [ 
            { title: '💬 ꒱「  ❖ Semua Perintah ⤸ 」',  description: 'Menampilkan semua fitur dari bot', rowId: '.? all' }, 
            { title: '🎮 ꒱「  ❖ Game ⤸ 」', description: 'Menampilkan fitur dari game', rowId: '.? game' }, 
