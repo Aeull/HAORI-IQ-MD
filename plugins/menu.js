@@ -37,7 +37,7 @@ let levelling = require('../lib/levelling')
 ⁙╭⃝━━•›ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ▣ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙‹•━━─▣
 ⁙┃╭┈─────────────⩵꙰ཱི࿐
 ⁙┃╰───━⃝┅❲ *%category* ❳┅⃝━───ꕥ ↶↷
-⁙├☆─〔 HAORI CHAN 〕──┈➤`,
+⁙├☆─〔 ArullBotz 〕──┈➤`,
   body: `⁙├〲 %cmd %islimit %isPremium`,
   footer: `⁙╰•──────━⃝┅⃝━─═┅═━–┈ ⳹`,
   after: `
