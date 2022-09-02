@@ -21,7 +21,7 @@ let fetch = require('node-fetch')
  function pickRandom(list) { 
    return list[Math.floor(Math.random() * list.length)] 
  } 
- global.owner = ['6285158866902','62831433937633', '62896255561617'] // Put your number here 
+ global.owner = ['6285822347348','6285822347348', '6285822347348'] // Put your number here 
  global.mods = [] // Want some help? 
  global.prems = [] // Premium user has unlimited limit 
  global.APIs = { // API Prefix 
@@ -62,19 +62,19 @@ let fetch = require('node-fetch')
  // Sticker WM 
  global.stiker_wait = '*WAIT! | Mohon Tunggu Sebentar...*' 
  global.packname = 'Buatan Siapa?' 
- global.author = `Buatan Haori` 
- global.wm = 'ＨＡＯＲＩ　ＩＱ　ＭＤ　🌹　'  
+ global.author = `Buatan ArullBotz` 
+ global.wm = 'ArullBotz'  
  global.watermark = wm 
- global.linkgc = 'https://chat.whatsapp.com/Kyz397uqvJZ5AvX7I4BSID'
-global.link = 'https://youtu.be/0CyJP3EKrf4'
+ global.linkgc = 'https://chat.whatsapp.com/ItwCvXL02hg11U5qNaLSBe'
+global.link = 'https://youtu.be/4cQwSCtZo1Q'
 global.deslink = ''
-global.titlink = 'ＨＡＯＲＩ　ＩＱ　ＭＤ　🌹　'
-global.bodlink = '@zivfurr'
-global.linkig = 'https://instagram.com/not_pilar32'
-global.instagram = 'https://instagram.com/not_pilar32'
+global.titlink = 'ArullBotz'
+global.bodlink = 'Arull'
+global.linkig = 'https://instagram.com/sahrulwara_____'
+global.instagram = 'https://instagram.com/sahrulwara_____'
  global.botdate = `❏ ${wktuh} H  ${wktum} M  ${wktus} S\n❏ ${week} ${date}` 
- global.media = 'https://telegra.ph/file/ccb2359d3925fd7af58cd.jpg' 
- global.github = 'https://github.com/PilarV2' 
+ global.media = 'https://telegra.ph/file/eb80c1d2d04f732433103.jpg' 
+ global.github = 'https://github.com/Warikrr' 
 global.fla = 'https://www6.flamingtext.com/net-fu/proxy_form.cgi?&imageoutput=true&script=crafts-logo&doScale=true&scaleWidth=500&scaleHeight=500&fontsize=100&fillTextType=0&backgroundColor=%23401620&text=' 
  global.wait = '_*L O A D I N G*_' 
  global.eror = '_*Server Error*_' 
