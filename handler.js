@@ -701,14 +701,14 @@ module.exports = {
                 if (chat.welcome) {
                     let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                     for (let user of participants) {
-                       let pp = './src/welcome.jpg'
+                       let pp = 'https://telegra.ph/file/61bfe7b248c6bf4abf9e0.jpg'
                         try {
                             pp = await this.profilePictureUrl(user, 'image')
                         } catch (e) {
                         } finally {
-                            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Yah,si Beban Masuk Grup').replace('@subject', groupMetadata.subject).replace('@desc', groupMetadata.desc.toString()) :
-                                (chat.sBye || this.bye || conn.bye || 'Sip, Beban Berkurang 1'))
-                                this.sendHButtonLoc(id, await(await fetch(pp)).buffer(), text, wm, "SC", "github.com/ilmanhdyt/ShiraoriBOT-Md", `MENU`, `.menu`, null)
+                            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Yah,si Beban Masuk Grup @user').replace('@subject', groupMetadata.subject).replace('@desc', groupMetadata.desc.toString()) :
+                                (chat.sBye || this.bye || conn.bye || 'Sip, Beban Berkurang @user!')).replace('@user', '@' + user.split('@')[0])
+                                this.sendButtonImg(id, pp, text, "𝗔𝗿𝘂𝗹𝗹𝗕𝗼𝘁𝘇", "Menu", ".menu", null)
                                 }
                     }
                 }
