@@ -55,7 +55,7 @@ const defaultMenu = {
     body: '┃ ◇ %cmd %islimit %isPremium',
     footer: '┗━━━━━━⬣\n',
     after: `
-*ꜱʜɪʀᴏ-ᴍᴅ@^%version*
+*ArullBotz@^%version*
 ${'```%npmdesc```'}
 `,
 }
