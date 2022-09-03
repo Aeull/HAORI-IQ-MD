@@ -1,11 +1,11 @@
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
+const { default: makeWASocket, BufferJSON, WA_DEFAULT_EPHEMERAL, generateWAMessageFromContent, downloadContentFromMessage, downloadHistory, proto, getMessage, generateWAMessageContent, prepareWAMessageMedia } = require('@adiwajshing/baileys-md')
 const { servers, yta, ytv } = require('../lib/y2mate')
+let fs = require('fs')
 let yts = require('yt-search')
 let fetch = require('node-fetch')
 let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!text) throw `uhm.. cari apa?\n\ncontoh:\n${usedPrefix + command} california`
   let chat = global.db.data.chats[m.chat]
-  conn.reply(m.chat, '*WAIT! | Mohon Tunggu Sebentar...*', m, {quoted: m, thumbnail: await (await fetch('https://telegra.ph/file/b9a32ee41970d7a71b476.jpg')).buffer(), contextInfo: { externalAdReply: {title: 'Lagi Memuat Data', sourceUrl: 'https://youtu.be/NmP2bAEOI9g', body: '© ArullBotz 𝙱𝚢 Arull', thumbnail: await (await fetch('https://telegra.ph/file/7d3c2136bec2eaec00f2e.jpg')).buffer(),}}})
   let results = await yts(text)
   let vid = results.all.find(video => video.seconds < 3600)
   if (!vid) throw 'Konten Tidak ditemukan'
@@ -24,48 +24,64 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
       m.reply(`Server ${server} error!${servers.length >= i + 1 ? '' : '\nmencoba server lain...'}`)
     }
   }
-
   if (yt === false) throw 'semua server gagal'
   if (yt2 === false) throw 'semua server gagal'
   let { dl_link, thumb, title, filesize, filesizeF } = yt
-    const ftrol = {
-    key : {
-    remoteJid: 'status@broadcast',
-    participant : '0@s.whatsapp.net'
-    },
-    message: {
-    orderMessage: {
-    itemCount : 2022,
-    status: 1,
-    surface : 1,
-    message: `❏ PLAY YOUTUBE`, 
-    orderTitle: `▮Menu ▸`,
-    thumbnail: await (await fetch('https://telegra.ph/file/c105f6b9ca8b32685f02e.jpg')).buffer(), //Gambarnye
-    sellerJid: '0@s.whatsapp.net' 
-    }
-    }
-    }
-  await conn.send3ButtonImg(m.chat, await (await fetch(thumb)).buffer(), `
-┏┉⌣ ┈̥-̶̯͡..̷̴✽̶┄┈┈┈┈┈┈┈┈┈┈┉┓
-┆ *PLAY YOUTUBE*
-└┈┈┈┈┈┈┈┈┈┈┈⌣ ┈̥-̶̯͡..̷̴✽̶⌣ ✽̶
+let anu =  `
+*Judul:* ${title}
+*Ukuran File Audio:* ${filesizeF}
+*Ukuran File Video:* ${yt2.filesizeF}
+*Server y2mate:* ${usedServer}
+*link sumber:* 
+${vid.url}
 
-*💌 Judul:* ${title}
-*🎶 Audio:* ${filesizeF}
-*🎥 Video:* ${yt2.filesizeF}
-*💻 Server y2mate:* ${usedServer}
-`.trim(), `🎙️ Audio`, `.yta ${vid.url}`, `🎥 Video`, `.yt ${vid.url}`, '🔎 YouTube Search', `.yts ${title}`, ftrol, {
-    contextInfo: { forwardingScore: 99999, isForwarded: true,
-        externalAdReply: {
-            title: ' ꕥ─────•「 Arull ▶︎ Botz 」•─────ꕥ', 
-            body: 'Apa benar ini yang anda cari?',
-            description: 'Apa benar ini yang anda cari?',
-            mediaType: 2,
-          thumbnail: await (await fetch('https://telegra.ph/file/9f8c29c09f70ae430c1f4.jpg')).buffer(),
-         mediaUrl: `https://youtube.com/watch?v=uIedYGN3NQQ`
-        }
-     }
-    })
+`
+     const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+     templateMessage: {
+         hydratedTemplate: {
+           hydratedContentText: anu,
+           locationMessage: { 
+           jpegThumbnail: await (await fetch(thumb)).buffer() }, 
+           hydratedFooterText: `jika video tidak sesuai
+silahkan ketik .yta link YouTube untuk mengunduh audio
+dan ketik .ytv link YouTube Untuk Mengunduh Video`,
+           hydratedButtons: [{
+             urlButton: {
+               displayText: 'MY GITHUB',
+               url: github
+             }
+
+           },
+               {
+             quickReplyButton: {
+               displayText: 'video 360p',
+               id: `.ytmp4 ${vid.url}`,
+             }
+
+            },
+               {
+             quickReplyButton: {
+               displayText: 'video 720p',
+               id: `.ytv720 ${vid.url}`,
+             }
+
+            },
+               {
+             quickReplyButton: {
+               displayText: 'Audio',
+               id: `.ytmp3 ${vid.url}`,
+             }
+
+           }]
+         }
+       }
+     }), { userJid: m.sender, quoted: m });
+    //conn.reply(m.chat, text.trim(), m)
+    return await conn.relayMessage(
+         m.chat,
+         template.message,
+         { messageId: template.key.id }
+     )
 }
 handler.help = ['play'].map(v => v + ' <pencarian>')
 handler.tags = ['downloader']
@@ -74,5 +90,3 @@ handler.command = /^(p|play)$/i
 handler.exp = 0
 
 module.exports = handler
-
-let wm = global.botwm
