@@ -5,7 +5,7 @@ let fetch = require('node-fetch')
 let handler = async (m, { conn, command, text, usedPrefix }) => {
   if (!text) throw `uhm.. cari apa?\n\ncontoh:\n${usedPrefix + command} california`
   let chat = global.db.data.chats[m.chat]
-  conn.reply(m.chat, '*WAIT! | Mohon Tunggu Sebentar...*', m, {quoted: m, thumbnail: await (await fetch('https://telegra.ph/file/b9a32ee41970d7a71b476.jpg')).buffer(), contextInfo: { externalAdReply: {title: 'Lagi Memuat Data', sourceUrl: 'https://vt.tiktok.com/ZSdnasM19/', body: '© 𝙷𝚊𝚘𝚛𝚒𝚋𝚘𝚝𝚣 𝙱𝚢 𝚉𝚒𝚟𝚏𝚞𝚛𝚛', thumbnail: await (await fetch('https://telegra.ph/file/7d3c2136bec2eaec00f2e.jpg')).buffer(),}}})
+  conn.reply(m.chat, '*WAIT! | Mohon Tunggu Sebentar...*', m, {quoted: m, thumbnail: await (await fetch('https://telegra.ph/file/b9a32ee41970d7a71b476.jpg')).buffer(), contextInfo: { externalAdReply: {title: 'Lagi Memuat Data', sourceUrl: 'https://youtu.be/NmP2bAEOI9g', body: '© ArullBotz 𝙱𝚢 Arull', thumbnail: await (await fetch('https://telegra.ph/file/7d3c2136bec2eaec00f2e.jpg')).buffer(),}}})
   let results = await yts(text)
   let vid = results.all.find(video => video.seconds < 3600)
   if (!vid) throw 'Konten Tidak ditemukan'
@@ -54,10 +54,10 @@ let handler = async (m, { conn, command, text, usedPrefix }) => {
 *🎶 Audio:* ${filesizeF}
 *🎥 Video:* ${yt2.filesizeF}
 *💻 Server y2mate:* ${usedServer}
-`.trim(), wm2, `🎙️ Audio`, `.yta ${vid.url}`, `🎥 Video`, `.yt ${vid.url}`, '🔎 YouTube Search', `.yts ${title}`, ftrol, {
+`.trim(), `🎙️ Audio`, `.yta ${vid.url}`, `🎥 Video`, `.yt ${vid.url}`, '🔎 YouTube Search', `.yts ${title}`, ftrol, {
     contextInfo: { forwardingScore: 99999, isForwarded: true,
         externalAdReply: {
-            title: ' ꕥ─────•「 Cute ▶︎ Botz 」•─────ꕥ', 
+            title: ' ꕥ─────•「 Arull ▶︎ Botz 」•─────ꕥ', 
             body: 'Apa benar ini yang anda cari?',
             description: 'Apa benar ini yang anda cari?',
             mediaType: 2,
