@@ -701,17 +701,35 @@ module.exports = {
                 if (chat.welcome) {
                     let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                     for (let user of participants) {
-                       let pp = 'https://telegra.ph/file/61bfe7b248c6bf4abf9e0.jpg'
+                        let pp = 'https://telegra.ph/file/118a75cb0c8396bdd7975.jpg'             
                         try {
                             pp = await this.profilePictureUrl(user, 'image')
                         } catch (e) {
                         } finally {
-                            text = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Yah,si Beban Masuk Grup @user').replace('@subject', groupMetadata.subject).replace('@desc', groupMetadata.desc.toString()) :
-                                (chat.sBye || this.bye || conn.bye || 'Sip, Beban Berkurang @user!')).replace('@user', '@' + user.split('@')[0])
-                                this.sendButtonImg(id, pp, text, "𝗔𝗿𝘂𝗹𝗹𝗕𝗼𝘁𝘇", "Menu", ".menu", null)
-                                }
+                            textt = (action === 'add' ? (chat.sWelcome || this.welcome || conn.welcome || 'Welcome, @user!').replace('@subject', groupMetadata.subject).replace('@desc', groupMetadata?.desc?.toString() || 'No Deskripsi') :
+                                (chat.sBye || this.bye || conn.bye || 'Bye, @user!')).replace('@user', '@' + user.split('@')[0])
+                            let mim = this.random(['application/vnd.openxmlformats-officedocument.presentationml.presentation', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'application/pdf', 'text/rtf'])
+                            //let mim = _mim[Math.floor(Math.random() * _mim.length)]
+                            this.sendBD(id, textt, global.wm, pp, [[`Menu`, `.menu`], [action === 'add' ? 'Welcome 🙏' : 'Sayonara 👋', 'iyjf']], {                      
+                              key: { fromMe: false, participant: `0@s.whatsapp.net`, remoteJid: 'status@broadcast' }, message: { contactMessage: { displayName: `${await this.getName(user)}`, vcard: `BEGIN: VCARD\nVERSION:3.0\nN:;a,;;;\nFN:${user}\nitem1.TEL;waid=${user.split('@')[0]}:${user.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD`}}},
+                              { 
+                               jpegThumbnail: await (await fetch("https://telegra.ph/file/27e90a619b30082694bde.jpg")).buffer(), fileName: action === 'add' ? `Welcome ${this.getName(user)} 🥰` : `Goodbye ${this.getName(user)} ☺`, mimetype: mim, fileLength: 9999999999999, pageCount: 9999999999999,
+                               mentions: [user],
+                               contextInfo: {
+                               externalAdReply :{
+                                  mediaUrl: 'https://youtu.be/NmP2bAEOI9g',
+                                  mediaType: 2,
+                                  description: '', 
+                                  title: action === 'add' ? 'Semoga Betah ツ' : 'Selamat Tinggal ツ',
+                                  body: '@' + global.wm,
+                                  thumbnail: await(await fetch(pp)).buffer(),
+                                  sourceUrl: ''
+                              }}
+                           })           
+                        }
                     }
                 }
+                break
                 break
             case 'promote':
                 text = (chat.sPromote || this.spromote || conn.spromote || '@user ```is now Admin```')
