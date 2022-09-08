@@ -717,13 +717,14 @@ module.exports = {
                                mentions: [user],
                                contextInfo: {
                                externalAdReply :{
-                                  mediaUrl: 'https://youtu.be/NmP2bAEOI9g',
-                                  mediaType: 2,
+                                  ShowAdAttribution: true,
+                                  mediaUrl: 'https://chat.whatsapp.com/ItwCvXL02hg11U5qNaLSBe',
+                                  mediaType: 1,
                                   description: '', 
                                   title: action === 'add' ? 'Semoga Betah ツ' : 'Selamat Tinggal ツ',
                                   body: '@' + global.wm,
                                   thumbnail: await(await fetch(pp)).buffer(),
-                                  sourceUrl: ''
+                                  sourceUrl: 'https://chat.whatsapp.com/ItwCvXL02hg11U5qNaLSBe'
                               }}
                            })           
                         }
